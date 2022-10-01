@@ -56,7 +56,7 @@ class FlutterValidator {
  * This Method will validate your content from URN Number Format.
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with URN Number format.
  */
-  bool urnNumberValidat({required String content}) {
+  bool urnNumberValidate({required String content}) {
     if (content.length != 19) {
       return false;
     } else {
@@ -69,7 +69,7 @@ class FlutterValidator {
  * This Method will validate your content from LLPIN Number Format.
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with LLPIN Number format.
  */
-  bool llpinValidat({required String content}) {
+  bool llpinValidate({required String content}) {
     if (content.length != 8) {
       return false;
     } else {
@@ -95,7 +95,7 @@ class FlutterValidator {
  * This Method will validate your content from Account Number Format.
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with Account Number format.
  */
-  bool ifscValidate({required String content}) {
+  bool ifscCodeValidate({required String content}) {
     if (content.length != 11) {
       return false;
     } else {
@@ -108,7 +108,7 @@ class FlutterValidator {
  * This Method will validate your content from Pin Code Format.
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with Pic Code format.
  */
-  bool isPincodeValid({required String content}) {
+  bool pinCodeValidate({required String content}) {
     if (content.length != 6) {
       return false;
     } else {
@@ -122,7 +122,7 @@ class FlutterValidator {
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with ATM/Credit Card Number Format.
  * [length] Length of card number.
  */
-  bool isValidCardNumber({required String content, int? length}) {
+  bool cardNumberValidate({required String content, int? length}) {
     if (content.length != length) {
       return false;
     } else {

@@ -27,17 +27,17 @@ emailValidate() - For Validate Email.
 
 aadhaarValidate() - For Validate Aadhaar Number.
 
-urnNumberValidat() - For Validate Udyam Registration Number.
+urnNumberValidate() - For Validate Udyam Registration Number.
 
-llpinValidat() - For Validate LLPIN Number.
+llpinValidate() - For Validate LLPIN Number.
 
 accountNumberValidate() - For Validate Account Number.
 
 ifscValidate() - For Validate IFSC Code.
 
-isPincodeValid() - For Validate Pin Code.
+pinCodeValidate() - For Validate Pin Code.
 
-isValidCardNumber() - For Validate Card Number.
+cardNumberValidate() - For Validate Card Number.
 
 
 
@@ -67,6 +67,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+
 //Creating Object of the FlutterValidator class.
   FlutterValidator validator = new FlutterValidator();
 
@@ -79,6 +80,7 @@ class HomePage extends StatelessWidget {
           child: InkWell(
             onTap: () {
               //Here We are calling Email validate method and passing that value which we want to compare with email.
+              // passing compare value into the content.
               bool result =
                   validator.emailValidate(content: "Chandan@gmail.com");
               print(result);
