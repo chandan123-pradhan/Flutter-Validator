@@ -134,13 +134,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "flutter_validator",
+      "name": "field_validator",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-10-01T03:38:54.265572Z",
+  "generated": "2022-10-01T03:51:25.884579Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }

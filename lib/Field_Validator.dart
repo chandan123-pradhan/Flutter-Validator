@@ -1,6 +1,6 @@
-library flutter_validator;
+library Field_Validator;
 
-class FlutterValidator {
+class FieldValidator {
 /**
  * This Method will validate your content from PAN Number Format.
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with PAN number format.

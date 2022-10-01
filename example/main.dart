@@ -1,5 +1,6 @@
+
+import 'package:field_validator/Field_Validator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_validator/Flutter_validator.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-//Creating Object of the FlutterValidator class.
-  FlutterValidator validator = new FlutterValidator();
+//Creating Object of the FieldValidator class.
+  FieldValidator validator = new FieldValidator();
 
   @override
   Widget build(BuildContext context) {
