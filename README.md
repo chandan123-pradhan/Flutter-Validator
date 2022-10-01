@@ -46,8 +46,8 @@ cardNumberValidate() - For Validate Card Number.
 
 ```dart
   
+import 'package:field_validator/Field_Validator.dart';
 import 'package:flutter/material.dart';
-import 'package:field_validator/field_validator.dart';
 
 void main() {
   runApp(MyApp());
@@ -67,9 +67,9 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-
-//Creating Object of the FlutterValidator class.
-  FlutterValidator validator = new FlutterValidator();
+    
+//Creating Object of the FieldValidator class.
+  FieldValidator validator = new FieldValidator();
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,6 @@ class HomePage extends StatelessWidget {
           child: InkWell(
             onTap: () {
               //Here We are calling Email validate method and passing that value which we want to compare with email.
-              // passing compare value into the content.
               bool result =
                   validator.emailValidate(content: "Chandan@gmail.com");
               print(result);
