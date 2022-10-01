@@ -1,4 +1,3 @@
-library Field_Validator;
 
 class FieldValidator {
 /**
