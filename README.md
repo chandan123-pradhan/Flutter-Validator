@@ -1,39 +1,97 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# flutter_validator
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+This package provides an easy way to validate Your Email, PAN, Pic code, Mobile Number And All Types of Documents like Indian Government Documents like Aadhar,PAN and LLPIN..etc This is often useful to avoid the use of RegEx for validating the user inputs which maynot work in some scenarios, this package written purely in dart will validate the numbers through CheckSum values.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
+[Example](https://github.com/chandan123-pradhan/Flutter-Validator/blob/master/example/main.dart)
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+To use this package:
 
-```dart
-const like = 'sample';
+* add the dependency to your [pubspec.yaml](https://github.com/chandan123-pradhan/Flutter-Validator/blob/master/pubspec.yaml) file.
+
+```yaml
+    dependencies:
+      flutter:
+        sdk: flutter
+      flutter_validator: ^0.0.1
 ```
 
-## Additional information
+## Available Methods
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+panValidate() - For Validate PAN Number.
+
+mobileValidate() - For Validate Mobile Number.
+
+emailValidate() - For Validate Email.
+
+aadhaarValidate() - For Validate Aadhaar Number.
+
+urnNumberValidat() - For Validate Udyam Registration Number.
+
+llpinValidat() - For Validate LLPIN Number.
+
+accountNumberValidate() - For Validate Account Number.
+
+ifscValidate() - For Validate IFSC Code.
+
+isPincodeValid() - For Validate Pin Code.
+
+isValidCardNumber() - For Validate Card Number.
+
+
+
+
+### How to use
+
+```dart
+  
+import 'package:flutter/material.dart';
+import 'package:flutter_validator/Flutter_validator.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Validator',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomePage());
+  }
+}
+
+class HomePage extends StatelessWidget {
+//Creating Object of the FlutterValidator class.
+  FlutterValidator validator = new FlutterValidator();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        child: Center(
+          child: InkWell(
+            onTap: () {
+              //Here We are calling Email validate method and passing that value which we want to compare with email.
+              bool result =
+                  validator.emailValidate(content: "Chandan@gmail.com");
+              print(result);
+            },
+            child: Text("Botton"),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+```
+
+## Done Thank You For The Using This Package. It Will Be Really Really Helpfull.

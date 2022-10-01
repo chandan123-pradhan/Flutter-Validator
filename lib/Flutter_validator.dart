@@ -81,7 +81,7 @@ class FlutterValidator {
  * This Method will validate your content from Account Number Format.
  * [content] Content is a Required parameter. Pass your inputed or that value which you want to compare with Account Number format.
  */
-  bool accountNumberValidat({required String content}) {
+  bool accountNumberValidate({required String content}) {
     if (content.length != 8) {
       return false;
     } else {
